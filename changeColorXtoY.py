@@ -20,13 +20,13 @@ def recolorImage(imagename):
         for j in i:
             r,g,b,a =  j[0], j[1],j[2],j[3]
             if r > 242:
-                if r==r1 and g==g1 and b==b1:
-                    j[0], j[1],j[2],j[3]=r2,g2,b2,a2                
+                if (r,g,b) = (r1,g1,b1):
+                    j[0], j[1],j[2],j[3]=r2,g2,b2,a                
                 elif r==b and r==g:
                     pass               
                 else:               
                     #print "{},{},{},".format(r,g,b)
-                    j[0], j[1],j[2],j[3]=r2,g2,b2,a2
+                    j[0], j[1],j[2],j[3]=r2,g2,b2,a
 
     im2 = Image.fromarray(data)
     im2.show()
